@@ -7,8 +7,15 @@ const app = express();
 //Port         
     const PORT = process.env.PORT || 3500; // (in case of env file missing)
 
+// test get port
 
-// listening Port
+        app.get('/', (req, res) => {
+            res.send(
+                '<h1>Get worked!</h1>'
+            );
+        });
+
+// listening Port - always at the bottom
     app.listen(PORT, () => {
         console.log("listening on port:" , PORT)
      })
